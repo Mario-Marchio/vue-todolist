@@ -11,6 +11,11 @@ const app = createApp({
                 {text: `comprare il cocco`, done:false, }
             ],
         }
+    },
+    methods:{
+        deleteTask(targetedIndex){
+            this.tasks.splice(targetedIndex, 1)
+        }
     }
  });
 
