@@ -4,6 +4,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return{
+            newTask: ``,
             tasks: [
                 {text: `comprare il latte`, done: false, },
                 {text: `comprare il pane`, done: false,},
@@ -14,7 +15,13 @@ const app = createApp({
     },
     methods:{
         deleteTask(targetedIndex){
-            this.tasks.splice(targetedIndex, 1)
+            this.tasks.splice(targetedIndex, 1);
+        },
+        addTask(){
+            const newTask ={text:this.newTask, done:false};
+            this.tasks.push(newTask);
+            this.newTask= ``,
+            this.$refs.addInput.focus();
         }
     }
  });

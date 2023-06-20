@@ -18,6 +18,12 @@
                     {{task.text}}
                     <button type="button" class="btn-close" aria-label="Close" @click="deleteTask(i)"></button>
                 </li>
+                <li>
+                    <div class="input-group mb-3">
+                        <input v-model.trim=" newTask " type="text" class="form-control" placeholder="inserisci una task nella lista..." aria-label="Recipient's username" aria-describedby="button-addon2" ref="addInput" >
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">aggiungi</button>
+                    </div>
+                </li>
             </ul>
         </div>
         
