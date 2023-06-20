@@ -14,7 +14,7 @@
         <div id="root">
             <h1>Todo List</h1>
             <ul>
-                <li v-for="(task, i) in tasks">
+                <li v-for="(task, i) in tasks" :class="{ 'text-decoration-line-through': task.done }">
                     {{task.text}}
                 </li>
             </ul>
